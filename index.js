@@ -34,6 +34,9 @@ const connect = () => {
 
  app.use(cookieParser());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("test api");
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/videos", videoRoutes);
