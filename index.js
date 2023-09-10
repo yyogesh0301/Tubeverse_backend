@@ -19,7 +19,6 @@ const app = express();
 dotenv.config();
 app.use(cors({
   origin:"https://cheery-cheesecake-1206e4.netlify.app",
-  credentials:true
 }));
 
 const connect = () => {
