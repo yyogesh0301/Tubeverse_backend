@@ -8,6 +8,10 @@ import videoRoutes from "./routes/videos.js"
 import commentRoutes from "./routes/comments.js"
 import authRoutes from "./routes/auth.js"
 import cookieParser from "cookie-parser"
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://cheery-cheesecake-1206e4.netlify.app/'
+}));
 
 const __filename=fileURLToPath(import.meta.url);
 const __dirname=(__filename);
