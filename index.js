@@ -17,9 +17,7 @@ const __dirname=(__filename);
 
 const app = express();
 dotenv.config();
-app.use(cors({
-  origin:"*",
-}));
+app.use(cors());
 
 
 
