@@ -17,7 +17,9 @@ const __dirname=(__filename);
 
 const app = express();
 dotenv.config();
-app.use(cors());
+app.use(cors({
+  credentials: true,
+}));
 
 const connect = () => {
   mongoose
