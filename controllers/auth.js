@@ -73,6 +73,7 @@ export const signup = async (req, res, next) => {
       const token = jwt.sign({ id: user._id }, process.env.JWT);
       res
         .cookie("access_token", token, {
+          maxAge:3600000,
           httpOnly: true,
         })
         .status(200)
@@ -86,6 +87,7 @@ export const signup = async (req, res, next) => {
       const token = jwt.sign({ id: savedUser._id }, process.env.JWT);
       res
         .cookie("access_token", token, {
+          maxAge:3600000,
           httpOnly: true,
         })
         .status(200)

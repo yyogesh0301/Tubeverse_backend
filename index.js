@@ -19,8 +19,6 @@ const app = express();
 dotenv.config();
 app.use(cors());
 
-
-
 const connect = () => {
   mongoose
     .connect(process.env.MONGO)
