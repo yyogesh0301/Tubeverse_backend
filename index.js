@@ -18,7 +18,7 @@ const __dirname=(__filename);
 const app = express();
 dotenv.config();
 app.use(cors({
-  origin: "https://cheery-cheesecake-1206e4.netlify.app",
+  origin: "https://tubeverse.netlify.app",
   credentials: true
 }));
 
