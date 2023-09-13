@@ -53,7 +53,6 @@ export const signup = async (req, res, next) => {
           
           const token =jwt.sign({id:user._id},process.env.JWT)
           res.header('Access-Control-Allow-Credentials',true);
-          res.header('Access-Control-Allow-Origin',"https://cheery-cheesecake-1206e4.netlify.app")
           const {password,...others} =user._doc
              res
              .cookie("access_token",token,{
