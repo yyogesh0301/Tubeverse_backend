@@ -52,12 +52,14 @@ export const signup = async (req, res, next) => {
         if(!isCorrect) return next(createError(400,"Wrong Credentials!"))
           
           const token =jwt.sign({id:user._id},process.env.JWT)
+          res.header('Access-Control-Allow-Credentials',true)
           const {password,...others} =user._doc
              res
              .cookie("access_token",token,{
               maxAge:3600000,
               httpOnly:true,
-              
+              secure:true,
+              sameSite:'none',
              })
              .status(200)
              .json(others);
